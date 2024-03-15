@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
-import "./globals.css";
+import "../styles/globals.css";
+import Navbar from "@/components/Navbar";
 
 const font = Plus_Jakarta_Sans({ subsets: ["latin"] });
 
@@ -16,7 +17,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning={true}>
-      <body className={font.className}>{children}</body>
+      <body className={`${font.className} text-stone-900`}>
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }

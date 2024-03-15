@@ -9,6 +9,11 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {},
+      colors: {
+        "primary-dark": "#151515",
+        "primary-light": "#dbd8d6",
+        primary: "#b5838d",
+      },
     },
   },
   plugins: [],
