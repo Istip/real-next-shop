@@ -15,7 +15,8 @@ p,
 span,
 b,
 strong,
-button {
+button,
+li {
   letter-spacing: -0.05rem;
 }
 
