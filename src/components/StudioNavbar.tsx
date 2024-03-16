@@ -4,7 +4,7 @@ import Logo from "./Logo";
 const StudioNavbar = (props: any) => {
   return (
     <div>
-      <div className="w-full border-b border-stone-200 bg-stone-100 p-4 flex items-center justify-between">
+      <div className="w-full border-b border-stone-200 bg-stone-100 p-4 flex items-center justify-between flex-col md:flex-row">
         <Link href="/" className="center text-primary">
           <svg
             width="24"
@@ -35,7 +35,7 @@ const StudioNavbar = (props: any) => {
               </clipPath>
             </defs>
           </svg>
-          Go back
+          Go back to Website
         </Link>
         <Logo />
         <p className="text-xs">Admin Panel for CMRC</p>
