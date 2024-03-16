@@ -36,17 +36,20 @@ const Navbar = () => {
             <div>CMRC</div>
           </h1>
         </Link>
-        <div className="w-full border border-stone-200 hidden lg:inline-flex lg:w-[600px] bg-stone-50 active:ring-2 center rounded-lg">
+        <div className="border border-stone-200 hidden lg:inline-flex lg:w-[600px] bg-stone-50 active:ring-2 center rounded-lg">
           <input
             id="search"
             type="text"
             name="searchText"
             placeholder="Search for a product"
-            className="w-full bg-transparent outline-none p-2"
+            className="w-full bg-transparent outline-none p-2 hidden lg:block"
             value={searchText}
             onChange={handleSearchText}
           />
-          <label htmlFor="search" className="px-2 cursor-pointer">
+          <label
+            htmlFor="search"
+            className="px-2 cursor-pointer hidden lg:block"
+          >
             <div onClick={handleClearSearchText}>
               {searchText ? (
                 <div className="text-stone-900 hover:text-red-600 transition-colors duration-300">
@@ -71,7 +74,7 @@ const Navbar = () => {
           ))}
         </ul>
 
-        <div className="cursor-pointer inline-flex md:hidden">
+        <div className="cursor-pointer inline-flex lg:hidden">
           <IconMenu />
         </div>
       </nav>
