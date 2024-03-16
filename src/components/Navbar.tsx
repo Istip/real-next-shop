@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
+import Logo from "./Logo";
 
 const Navbar = () => {
   const [searchText, setSearchText] = React.useState<string>("");
@@ -30,12 +31,7 @@ const Navbar = () => {
         aria-label="navigation"
         className="h-full max-w-screen-xl mx-auto px-4 xl:px-0 flex items-center justify-between gap-2"
       >
-        <Link href="/">
-          <h1 className="text-xl font-black text-primary-dark center gap-1">
-            <div className="w-4 h-4 rounded-full bg-primary" />
-            <div>CMRC</div>
-          </h1>
-        </Link>
+        <Logo />
         <div className="border border-stone-200 hidden lg:inline-flex lg:w-[600px] bg-stone-50 active:ring-2 center rounded-lg">
           <input
             id="search"
