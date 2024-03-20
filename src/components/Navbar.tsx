@@ -26,7 +26,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="w-full h-20 bg-stone-100 border border-stone-200">
+    <div className="w-full h-20 bg-stone-100 border border-stone-200 sticky top-0 z-50">
       <nav
         aria-label="navigation"
         className="h-full max-w-screen-xl mx-auto px-4 xl:px-0 flex items-center justify-between gap-2"
