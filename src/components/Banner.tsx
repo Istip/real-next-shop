@@ -1,14 +1,37 @@
-import React from "react";
+"use client";
 
-const Banner = () => {
+import Image from "next/image";
+import Slider from "react-slick";
+import { urlForImage } from "@/sanity/lib/image";
+
+interface Props {
+  banners: any;
+}
+
+const Banner = ({ banners }: Props) => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    autoplay: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    adaptiveHeight: true,
+  };
+
   return (
     <div>
-      <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus nulla
-        nihil sit numquam doloremque sapiente, delectus aut, nisi inventore
-        ratione accusamus iste possimus eum asperiores in quod ullam,
-        praesentium quos?
-      </p>
+      <Slider {...settings}>
+        {banners?.map((banner: any) => (
+          <Image
+            key={banner._id}
+            src={urlForImage(banner.image)}
+            alt={banner.title}
+            className="relative w-full max-h-[650px] object-cover"
+            width={1920}
+            height={1920}
+          />
+        ))}
+      </Slider>
     </div>
   );
 };
